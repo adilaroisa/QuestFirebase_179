@@ -12,3 +12,6 @@ class DefaultContainerApp : ContainerApp {
     }
 }
 
+class AplikasiDataSiswa : Application() {
+    lateinit var container: ContainerApp
+}
