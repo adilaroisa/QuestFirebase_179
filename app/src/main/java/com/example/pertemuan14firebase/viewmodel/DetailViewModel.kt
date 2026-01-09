@@ -2,7 +2,18 @@
 
 package com.example.pertemuan14firebase.viewmodel
 
-
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.pertemuan14firebase.modeldata.Siswa
+import com.example.pertemuan14firebase.repositori.RepositorySiswa
+import com.example.pertemuan14firebase.view.route.DestinasiDetail
+import kotlinx.coroutines.launch
+import kotlinx.serialization.InternalSerializationApi
+import java.io.IOException
 
 sealed interface StatusUIDetail {
     data class Success(val satusiswa: Siswa?) : StatusUIDetail
