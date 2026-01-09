@@ -1,5 +1,27 @@
 package com.example.pertemuan14firebase.view
 
+import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.pertemuan14firebase.R
+import com.example.pertemuan14firebase.modeldata.Siswa
+import com.example.pertemuan14firebase.viewmodel.DetailViewModel
+import com.example.pertemuan14firebase.viewmodel.PenyediaViewModel
+import com.example.pertemuan14firebase.viewmodel.StatusUIDetail
+import com.example.pertemuan14firebase.view.route.DestinasiDetail
+import kotlinx.coroutines.launch
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailSiswaScreen(
@@ -30,7 +52,7 @@ fun DetailSiswaScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Edit,
-                    contentDescription = stringResource(R.string.update_siswa)
+                    contentDescription = stringResource(R.string.update)
                 )
             }
         }, modifier = modifier
@@ -157,7 +179,7 @@ private fun DeleteConfirmationDialog(
 ) {
     AlertDialog(onDismissRequest = { /* Do nothing */ },
         title = { Text(stringResource(R.string.attention)) },
-        text = { Text(stringResource(R.string.delete_confirmation)) },
+        text = { Text(stringResource(R.string.delete)) },
         modifier = modifier,
         dismissButton = {
             TextButton(onClick = onDeleteCancel) {
