@@ -3,12 +3,17 @@ package com.example.pertemuan14firebase.view.controllNavigasi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.pertemuan14firebase.view.DetailSiswaScreen
+import com.example.pertemuan14firebase.view.EditSiswaScreen
 import com.example.pertemuan14firebase.view.EntrySiswaScreen
 import com.example.pertemuan14firebase.view.HomeScreen
 import com.example.pertemuan14firebase.view.route.DestinasiDetail
+import com.example.pertemuan14firebase.view.route.DestinasiEdit
 import com.example.pertemuan14firebase.view.route.DestinasiEntry
 import com.example.pertemuan14firebase.view.route.DestinasiHome
 
